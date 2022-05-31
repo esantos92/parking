@@ -1,0 +1,16 @@
+# PostgreSQL. Versions 9.3 and up are supported.
+default: &default
+  host: db
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: postgres
+development:
+  <<: *default
+  database: parking_development
+test:
+  <<: *default
+  database: parking_test
+production:
+  <<: *default
+  database: parking_production
